@@ -1,0 +1,22 @@
+SONORA — página de música
+
+CÓMO ABRIR
+1. Descarga y descomprime sonora_music_web.zip.
+2. Abre la carpeta sonora_music_web.
+3. Haz doble clic en index.html para abrirla en Chrome, Edge o Firefox.
+
+ARCHIVOS
+- index.html: estructura HTML.
+- styles.css: diseño CSS adaptable a computadora y móvil.
+- script.js: interacciones JavaScript.
+
+FUNCIONES
+- Buscar canciones, artistas y géneros.
+- Filtrar por mood/estilo musical.
+- Reproductor visual con controles, progreso, aleatorio y repetición.
+- Marcar canciones con Me gusta.
+- Crear playlists de demostración.
+- Diseño adaptable a pantallas pequeñas.
+
+NOTA
+Es una demo de interfaz. Las canciones y artistas son ficticios y el reproductor simula la reproducción; no reproduce audio real ni se conecta a un servicio de música. La fuente tipográfica online requiere internet, pero el resto del diseño está en los archivos incluidos.

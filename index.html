@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SONORA — descubre música nueva, explora artistas y crea tu próxima playlist favorita.">
+  <title>SONORA — Música para sentir</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#inicio" aria-label="SONORA inicio"><span class="brand-mark">S</span><span>SONORA<small>YOUR SOUND SPACE</small></span></a>
+      <p class="nav-label">DESCUBRIR</p>
+      <nav class="main-nav">
+        <a class="nav-link active" href="#inicio"><span class="nav-icon">⌂</span> Inicio</a>
+        <a class="nav-link" href="#explorar"><span class="nav-icon">⌕</span> Explorar</a>
+        <a class="nav-link" href="#novedades"><span class="nav-icon">✦</span> Novedades</a>
+      </nav>
+      <div class="library-head"><p class="nav-label">TU BIBLIOTECA</p><button id="createPlaylist" class="icon-button" aria-label="Crear playlist" title="Crear playlist">＋</button></div>
+      <nav class="main-nav">
+        <a class="nav-link" href="#favoritos"><span class="nav-icon">♡</span> Me gusta</a>
+        <a class="nav-link" href="#playlists"><span class="nav-icon">▤</span> Playlists</a>
+      </nav>
+      <div class="sidebar-playlists" id="playlistList">
+        <a href="#vibra" class="playlist-shortcut"><span class="playlist-dot violet"></span> Vibra nocturna</a>
+        <a href="#focus" class="playlist-shortcut"><span class="playlist-dot mint"></span> Focus mode</a>
+        <a href="#domingo" class="playlist-shortcut"><span class="playlist-dot orange"></span> Domingo lento</a>
+      </div>
+      <div class="sidebar-bottom">
+        <div class="upgrade-icon">♫</div>
+        <div><strong>Tu música, tu mundo</strong><p>Encuentra el sonido que va contigo.</p></div>
+      </div>
+    </aside>
+
+    <main class="main-content" id="inicio">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Abrir menú">☰</button>
+        <div class="history-buttons"><button class="round-button" aria-label="Atrás" id="backBtn">‹</button><button class="round-button" aria-label="Adelante" id="forwardBtn">›</button></div>
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Busca canciones, artistas o álbumes..." autocomplete="off"><kbd>⌘ K</kbd></label>
+        <button class="profile-button"><span class="profile-avatar">M</span><span>Mi espacio</span><span>⌄</span></button>
+      </header>
+
+      <section class="hero">
+        <div class="hero-content">
+          <span class="eyebrow"><span class="live-dot"></span> TU UNIVERSO MUSICAL</span>
+          <h1>Hay una canción<br>para cada <em>momento.</em></h1>
+          <p>Descubre sonidos nuevos, vuelve a tus favoritos y encuentra tu próximo ritmo.</p>
+          <div class="hero-actions"><button class="button button-light" id="heroPlay">▶&nbsp; Explorar música</button><a class="button button-ghost" href="#novedades">Ver novedades <span>↗</span></a></div>
+        </div>
+        <div class="hero-art" aria-label="Ilustración abstracta de ondas musicales">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>
+          <div class="vinyl"><div class="vinyl-label"><span>SONORA</span><b>♫</b></div></div>
+          <div class="floating-note note-one">♪</div><div class="floating-note note-two">♫</div><div class="sound-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="art-caption"><span class="caption-dot"></span> SOUND ON, WORLD OFF</div>
+        </div>
+      </section>
+
+      <section class="section" id="explorar">
+        <div class="section-heading"><div><p class="eyebrow">HECHO PARA TI</p><h2>Tu mood de hoy</h2></div><a href="#categorias" class="see-all">Ver todos <span>→</span></a></div>
+        <div class="mood-grid">
+          <button class="mood-card mood-purple" data-mood="Todo" data-filter="pop"><span class="mood-symbol">✳</span><span><strong>Pop energy</strong><small>Sube el volumen</small></span><span class="mood-arrow">↗</span></button>
+          <button class="mood-card mood-blue" data-filter="chill"><span class="mood-symbol">☾</span><span><strong>Chill vibes</strong><small>Baja las revoluciones</small></span><span class="mood-arrow">↗</span></button>
+          <button class="mood-card mood-orange" data-filter="indie"><span class="mood-symbol">✺</span><span><strong>Indie discovery</strong><small>Fuera de lo común</small></span><span class="mood-arrow">↗</span></button>
+          <button class="mood-card mood-green" data-filter="electronic"><span class="mood-symbol">⌁</span><span><strong>Electronic</strong><small>Entra en el ritmo</small></span><span class="mood-arrow">↗</span></button>
+        </div>
+      </section>
+
+      <section class="section" id="novedades">
+        <div class="section-heading"><div><p class="eyebrow">EN ROTACIÓN</p><h2>Descubrimientos de la semana</h2></div><button class="see-all see-button" id="showAll">Ver catálogo <span>→</span></button></div>
+        <div id="trackGrid" class="track-grid"></div>
+        <p id="noResults" class="no-results hidden">No encontramos resultados. Prueba con otro nombre o artista.</p>
+      </section>
+
+      <section class="section playlist-section" id="playlists">
+        <div class="section-heading"><div><p class="eyebrow">SELECCIÓN SONORA</p><h2>Playlists para entrar en mood</h2></div></div>
+        <div class="playlist-grid">
+          <article class="playlist-card playlist-card-dark"><div class="playlist-cover cover-night"><span>AFTER<br>HOURS</span><div class="cover-moon"></div></div><div class="playlist-info"><span class="playlist-type">PLAYLIST · 24 CANCIONES</span><h3>After Hours</h3><p>Para cuando la ciudad no duerme.</p><button class="mini-play" data-playlist="After Hours">▶ Reproducir mix</button></div></article>
+          <article class="playlist-card"><div class="playlist-cover cover-sun"><div class="sun-disc"></div><span>GOOD<br>DAY</span></div><div class="playlist-info"><span class="playlist-type">PLAYLIST · 18 CANCIONES</span><h3>Good Day Club</h3><p>Pequeñas canciones, grandes días.</p><button class="mini-play" data-playlist="Good Day Club">▶ Reproducir mix</button></div></article>
+          <article class="playlist-card"><div class="playlist-cover cover-focus"><div class="focus-orb"></div><span>DEEP<br>FOCUS</span></div><div class="playlist-info"><span class="playlist-type">PLAYLIST · 32 CANCIONES</span><h3>Deep Focus</h3><p>Entra en flujo y deja que pase.</p><button class="mini-play" data-playlist="Deep Focus">▶ Reproducir mix</button></div></article>
+        </div>
+      </section>
+      <footer><a class="brand footer-brand" href="#inicio"><span class="brand-mark">S</span><span>SONORA<small>YOUR SOUND SPACE</small></span></a><span>Hecho para escuchar diferente. <span id="year"></span></span><a href="#inicio">Volver arriba ↑</a></footer>
+    </main>
+  </div>
+
+  <div class="player-bar">
+    <div class="now-playing"><div class="mini-cover" id="currentCover">♫</div><div class="now-meta"><strong id="currentTitle">Elige tu próximo sonido</strong><span id="currentArtist">Tu música empieza aquí</span></div><button id="likeCurrent" class="like-button" aria-label="Me gusta">♡</button></div>
+    <div class="player-center"><div class="player-controls"><button class="control-button" id="shuffleBtn" title="Aleatorio">⤨</button><button class="control-button" id="prevTrack" title="Anterior">◀</button><button class="play-main" id="playPause" aria-label="Reproducir">▶</button><button class="control-button" id="nextTrack" title="Siguiente">▶|</button><button class="control-button" id="repeatBtn" title="Repetir">↻</button></div><div class="progress-row"><span id="currentTime">0:00</span><input id="progress" type="range" min="0" max="100" value="0" aria-label="Progreso de canción"><span id="duration">0:00</span></div></div>
+    <div class="player-extra"><span>♫</span><input id="volume" type="range" min="0" max="100" value="70" aria-label="Volumen"><button class="control-button" id="queueBtn" title="Ver cola">☷</button></div>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <dialog id="playlistDialog"><form method="dialog" id="playlistForm"><div class="dialog-head"><div><p class="eyebrow">TU BIBLIOTECA</p><h2>Nueva playlist</h2></div><button class="icon-button" aria-label="Cerrar">×</button></div><label>Nombre de la playlist<input id="playlistName" required maxlength="35" placeholder="Ej. Mis favoritos"></label><label>Descripción (opcional)<input id="playlistDescription" maxlength="80" placeholder="Un mood, una historia..."></label><div class="dialog-actions"><button class="button button-muted" value="cancel">Cancelar</button><button class="button button-primary" value="default">Crear playlist</button></div></form></dialog>
+  <script src="script.js"></script>
+</body>
+</html>
